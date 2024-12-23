@@ -14,6 +14,8 @@
 		C3AFC0312D1A0916006C5FB1 /* HelloTriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AFC0302D1A0916006C5FB1 /* HelloTriangleTests.swift */; };
 		C3AFC03B2D1A0916006C5FB1 /* HelloTriangleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AFC03A2D1A0916006C5FB1 /* HelloTriangleUITests.swift */; };
 		C3AFC03D2D1A0916006C5FB1 /* HelloTriangleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AFC03C2D1A0916006C5FB1 /* HelloTriangleUITestsLaunchTests.swift */; };
+		C3AFC04A2D1A09E7006C5FB1 /* renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AFC0492D1A09E7006C5FB1 /* renderer.swift */; };
+		C3AFC04D2D1A1DF1006C5FB1 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = C3AFC04C2D1A1DF1006C5FB1 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		C3AFC0362D1A0916006C5FB1 /* HelloTriangleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloTriangleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AFC03A2D1A0916006C5FB1 /* HelloTriangleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTriangleUITests.swift; sourceTree = "<group>"; };
 		C3AFC03C2D1A0916006C5FB1 /* HelloTriangleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTriangleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3AFC0492D1A09E7006C5FB1 /* renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = renderer.swift; sourceTree = "<group>"; };
+		C3AFC04B2D1A193D006C5FB1 /* definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = definitions.h; sourceTree = "<group>"; };
+		C3AFC04C2D1A1DF1006C5FB1 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				C3AFC01F2D1A0915006C5FB1 /* HelloTriangleApp.swift */,
+				C3AFC04B2D1A193D006C5FB1 /* definitions.h */,
 				C3AFC0212D1A0915006C5FB1 /* ContentView.swift */,
+				C3AFC0492D1A09E7006C5FB1 /* renderer.swift */,
+				C3AFC04C2D1A1DF1006C5FB1 /* Shaders.metal */,
 				C3AFC0232D1A0916006C5FB1 /* Assets.xcassets */,
 				C3AFC0252D1A0916006C5FB1 /* Preview Content */,
 			);
@@ -257,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3AFC04D2D1A1DF1006C5FB1 /* Shaders.metal in Sources */,
+				C3AFC04A2D1A09E7006C5FB1 /* renderer.swift in Sources */,
 				C3AFC0222D1A0915006C5FB1 /* ContentView.swift in Sources */,
 				C3AFC0202D1A0915006C5FB1 /* HelloTriangleApp.swift in Sources */,
 			);
@@ -438,6 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hchalin.HelloTriangle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HelloTriangle/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hchalin.HelloTriangle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = HelloTriangle/definitions.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
